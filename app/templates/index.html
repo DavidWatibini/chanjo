@@ -1,5 +1,38 @@
 {% extends 'base.html'%}
-
+{% import 'bootstrap/wtf.html' as wtf%}
 {% block content %}
-  <h2>Your Code comes here</h2>
+<h2>Your Code comes here</h2>
+<!-- <div class="container">
+  <form method="POST">
+    <div class="form-group">
+      <label for="formSMSMessage">SMS Message</label>
+      <input name="smsMessage" type="text" class="form-control" id="smsMessage" placeholder="Enter SMS Message">
+    </div>
+    <div class="form-group">
+      <label for="formPhoneNumber">Phone Number</label>
+      <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Enter Phone Numner">
+    </div>
+    <button id="sendSMS" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div> -->
+{{ wtf.quick_form(book_form) }}
+<script>
+  $(function() {
+    $('#sendSMS').click(function() {
+
+      $.ajax({
+        url: '/',
+        data: $('form').serialize(),
+        type: 'POST',
+        success: function(response) {
+          console.log(response);
+        },
+        error: function(error) {
+          console.log(error);
+        }
+      });
+
+    });
+  });
+</script>
 {%endblock%}
