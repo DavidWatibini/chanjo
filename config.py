@@ -4,15 +4,12 @@ class Config:
 
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:1234@localhost/chanjo'
-
-
-    pass
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
 
 class ProdConfig(Config):
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-
+    # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    pass
 
 class DevConfig(Config):
 
