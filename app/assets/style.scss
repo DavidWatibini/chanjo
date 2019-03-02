@@ -1,0 +1,68 @@
+$font: 'Montserrat', sans-serif;
+
+$main: #172A3A;
+$second-color: #508991;
+
+@mixin fonts($color,$weight,$size,$family: $font) {
+   font-family: $family;
+   color: $color;
+   font-weight: $weight;
+   font-size: $size;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: $font;
+}
+
+a {
+   text-decoration: none;
+   @include fonts(rgba($main,0.5),500,13px);
+}
+
+.right {
+   float: right;
+}
+
+.left {
+   float: left;
+}
+
+nav {
+   h1,ul {
+      display: inline-block;
+   }
+}
+
+.logo {
+   h1 {
+      @include fonts($second-color,800,18px);
+   }
+   
+}
+
+.container {
+   margin: 2% 2.5%;
+}
+
+.signup-form {
+   clear: left;
+   fieldset {
+      margin-top: 20%;
+      border: none;
+      padding: 0;
+      input {
+         width: 23%;
+         margin: 0.5% 0;
+         padding: 8px 10px;
+      }
+   }
+   .main-btn {
+      margin: 1% 0;
+      background-color: $second-color;
+      border: none;
+      @include fonts(#fff,500,13px);
+      padding: 8px 12px;
+   }
+}

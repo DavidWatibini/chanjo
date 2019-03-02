@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(23, 42, 58, 0.5);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+nav h1, nav ul {
+  display: inline-block;
+}
+
+.logo h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #508991;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.container {
+  margin: 2% 2.5%;
+}
+
+.signup-form {
+  clear: left;
+}
+
+.signup-form fieldset {
+  margin-top: 20%;
+  border: none;
+  padding: 0;
+}
+
+.signup-form fieldset input {
+  width: 23%;
+  margin: 0.5% 0;
+  padding: 8px 10px;
+}
+
+.signup-form .main-btn {
+  margin: 1% 0;
+  background-color: #508991;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 8px 12px;
+}
+/*# sourceMappingURL=style.css.map */
