@@ -26,10 +26,10 @@ def register():
         return redirect(url_for("auth.register"))
 
         flash('You\'ve successfully registered. You can now login.')
-    
+
     # Log in validation
-    
-        
+
+
     return render_template('auth/register.html',registration_form = form,login_form = login_form)
 
 
